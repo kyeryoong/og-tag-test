@@ -22,7 +22,7 @@
     <title>React App</title>
   </head>
   <body>
-    <meta name="title" property="og:title" content="BODY에 있는 제목입니다." />
+    <!-- <meta name="title" property="og:title" content="BODY에 있는 제목입니다." />
     <meta
       name="description"
       property="og:description"
@@ -32,7 +32,29 @@
       name="image"
       property="og:image"
       content="https://www.thoughtco.com/thmb/g8h6NnWWWVkm-KXNBgMx-0Edd2U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg"
-    />
+    /> -->
     <div id="root"></div>
   </body>
+  <script>
+    var metaTagTitle = document.createElement("meta");
+    metaTagTitle.setAttribute("name", "title");
+    metaTagTitle.setAttribute("property", "og:title");
+    metaTagTitle.setAttribute("content", "제목제목제목제목제목");
+    document.getElementsByTagName("head")[0].appendChild(metaTagTitle);
+
+    var metaTagDescription = document.createElement("meta");
+    metaTagDescription.setAttribute("name", "description");
+    metaTagDescription.setAttribute("property", "og:description");
+    metaTagDescription.setAttribute("content", "여기는 설명하는 부분입니다.");
+    document.getElementsByTagName("head")[0].appendChild(metaTagDescription);
+
+    var metaTagImage = document.createElement("meta");
+    metaTagImage.setAttribute("name", "image");
+    metaTagImage.setAttribute("property", "og:image");
+    metaTagImage.setAttribute(
+      "content",
+      "https://www.thoughtco.com/thmb/g8h6NnWWWVkm-KXNBgMx-0Edd2U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg"
+    );
+    document.getElementsByTagName("head")[0].appendChild(metaTagImage);
+  </script>
 </html>
